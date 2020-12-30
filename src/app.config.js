@@ -5,7 +5,9 @@ export default {
     'pages/Compass/Compass',
     'pages/Gyroscope/Gyroscope',
     'pages/DeviceMotion/DeviceMotion',
-    'pages/GPS/GPS'
+    'pages/GPS/GPS',
+    'pages/WIFI/WIFI',
+    'pages/Bluetooth/Bluetooth'
   ],
   window: {
     backgroundTextStyle: 'light',

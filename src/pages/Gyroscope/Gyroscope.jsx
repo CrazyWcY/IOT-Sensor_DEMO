@@ -22,12 +22,13 @@ const Gyroscope = () => {
     
     return (
         <View>
+            <View style={{fontSize: '20px', fontWeight: 'bold', marginBottom: '10%'}}>陀螺仪</View>
             {
                 direction ? 
-                <View>
-                    <View>x: {direction.x}</View>
-                    <View>y: {direction.y}</View>
-                    <View>z: {direction.z}</View>
+                <View style={{fontSize: '20px', fontWeight: 'bold'}}>
+                    <View style={{margin: '3%'}}>x: {direction.x}</View>
+                    <View style={{margin: '3%'}}>y: {direction.y}</View>
+                    <View style={{margin: '3%'}}>z: {direction.z}</View>
                 </View> : null
             }
         </View>

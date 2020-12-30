@@ -20,14 +20,13 @@ const GPS = () => {
 
     return (
         <View>
+            <View style={{fontSize: '20px', fontWeight: 'bold', marginBottom: '10%'}}>GPS定位</View>
             {
                 data ?
-                    <View>
-                        <View>纬度: {data.latitude}</View>
-                        <View>经度: {data.longitude}</View>
-                        <View>速度: {data.speed}</View>
-                        <View>位置的精确度: {data.accuracy}</View>
-                        <View>高度: {data.altitude}</View>
+                    <View style={{fontSize: '20px', fontWeight: 'bold'}}>
+                        <View style={{margin: '3%'}}>纬度: {data.latitude}</View>
+                        <View style={{margin: '3%'}}>经度: {data.longitude}</View>
+                        <View style={{margin: '3%'}}>位置的精确度: {data.accuracy}</View>
                     </View> : null
             }
         </View>

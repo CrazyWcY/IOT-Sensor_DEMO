@@ -26,14 +26,16 @@ const Compass = () => {
 
     return (
         <View>
+            <View style={{fontSize: '20px', fontWeight: 'bold', marginBottom: '10%'}}>罗盘</View>
             {
                 direction ?
-                    <View>
-                        <View>direction: {direction.direction}</View>
-                        <View>accuracy: {direction.accuracy}</View>
+                    <View style={{fontSize: '20px', fontWeight: 'bold'}}>
+                        <View style={{margin: '3%'}}>direction: {direction.direction}</View>
+                        <View style={{margin: '3%'}}>accuracy: {direction.accuracy}</View>
+                        <View style={{margin: '3%'}}>旋转角度: {360 - direction.direction.toFixed(0)}</View>
                         <Image src='https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/38dbb6fd5266d01629d11d1f902bd40735fa3538.jpg'
-                        style={`position:fixed;z-index:5;margin-top:190rpx;width:400rpx;height:400rpx;transform: rotate(${360 - direction.direction.toFixed(0)}deg);`}></Image>
-                    </View> : null
+                        style={`position:fixed;z-index:5;margin-top:300rpx;margin-left:30rpx;width:400rpx;height:400rpx;transform: rotate(${360 - direction.direction.toFixed(0)}deg);`}></Image>
+                    </View> : <View style={{fontSize: '20px', fontWeight: 'bold'}}>数据获取中</View>
             }
         </View>
     )
