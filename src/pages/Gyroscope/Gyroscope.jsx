@@ -29,7 +29,7 @@ const Gyroscope = () => {
                     <View style={{margin: '3%'}}>x: {direction.x}</View>
                     <View style={{margin: '3%'}}>y: {direction.y}</View>
                     <View style={{margin: '3%'}}>z: {direction.z}</View>
-                </View> : null
+                </View> : <View style={{fontSize: '20px', fontWeight: 'bold'}}>数据获取中</View>
             }
         </View>
     )

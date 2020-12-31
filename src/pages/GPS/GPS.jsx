@@ -16,7 +16,7 @@ const GPS = () => {
                 console.log(res)
             }
         })
-    }, [])
+    })
 
     return (
         <View>
@@ -27,7 +27,7 @@ const GPS = () => {
                         <View style={{margin: '3%'}}>纬度: {data.latitude}</View>
                         <View style={{margin: '3%'}}>经度: {data.longitude}</View>
                         <View style={{margin: '3%'}}>位置的精确度: {data.accuracy}</View>
-                    </View> : null
+                    </View> : <View style={{fontSize: '20px', fontWeight: 'bold'}}>数据获取中</View>
             }
         </View>
     )

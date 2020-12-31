@@ -35,7 +35,7 @@ const Accelerometer = () => {
                         <View style={{margin: '3%'}}>Z:{direction.z}</View>
 
                         <View style={{margin: '3%'}}>倾斜角度:{Math.atan2(direction.x, direction.y) * 180 / Math.PI}</View>
-                        <View style={`margin-top:200px; width:600rpx; height:5rpx;background:red;transform:rotate(${Math.atan2(direction.x, direction.y) * 180 / Math.PI}deg)`}></View>
+                        <View style={`margin: 0 auto; margin-top:200px; width:600rpx; height:5rpx;background:red;transform:rotate(${Math.atan2(direction.x, direction.y) * 180 / Math.PI}deg)`}></View>
                     </View> : 
                     
                     <View style={{fontSize: '20px', fontWeight: 'bold'}}>数据获取中</View>

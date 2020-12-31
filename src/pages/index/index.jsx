@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text } from '@tarojs/components'
+import { View, Text, Image } from '@tarojs/components'
 import { AtButton } from 'taro-ui'
 import Taro, { Events } from '@tarojs/taro'
 
@@ -62,16 +62,19 @@ export default class Index extends Component {
     render() {
         return (
             <View className='index'>
-                <View style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10%' }}>IOT-传感器接口调用演示</View>
-                <View style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10%' }}>SJTU 120037910040-王崇宇</View>
-                <View style={{ margin: '3%'}}>
-                {
-                    comps.map(item => (
-                        <View style={{ margin: '3%'}}>
-                            <AtButton type='primary' style={{ margin: '3%'}} onClick={this.handleClick.bind(this, item.name)}>{item.label}</AtButton>
-                        </View>
-                    ))
-                }
+                <View style={{ marginTop: '3%',  textAlign: 'center' }}>
+                    <Image style={{ width: '208px', height: '54px', marginBottom: '3%'}} src='https://tse3-mm.cn.bing.net/th/id/OIP.okCiVmUJ-z3tM4aLZgyA6wHaB8?pid=Api&rs=1'></Image>
+                    <View style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10%', textAlign: 'center' }}>IOT-传感器接口调用演示</View>
+                    <View style={{ fontSize: '15px', fontWeight: 'bold', marginBottom: '10%', textAlign: 'center' }}>120037910040-王崇宇</View>
+                </View>
+                <View style={{ margin: '3%' }}>
+                    {
+                        comps.map(item => (
+                            <View style={{ margin: '3%' }}>
+                                <AtButton type='primary' style={{ margin: '3%' }} onClick={this.handleClick.bind(this, item.name)}>{item.label}</AtButton>
+                            </View>
+                        ))
+                    }
                 </View>
             </View>
         )
